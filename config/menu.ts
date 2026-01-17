@@ -15,5 +15,7 @@ export const menuTree = [
     children: pagesMap 
   },
   
+  { name: 'frameworks', path: '/frameworks' },
+  
   { name: 'about', path: '/about' }
 ];

@@ -1,0 +1,14 @@
+/* app/frameworks/cntntc.css */
+
+/* REQUIRED: Handles the 200px height for all content scenarios */
+.sbcnt-content-area { 
+  min-height: 200px; 
+}
+/* h3 inside sbcnt-content-area */
+.view-pgttl-text { 
+  font-size: 1.125rem; 
+  font-weight: 500; 
+  color: #1e293b; 
+  text-transform: lowercase; 
+  letter-spacing: -0.025em; 
+}
