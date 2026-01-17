@@ -21,7 +21,7 @@ export default function View({ shell, title }: any) {
         {shell.sideClass !== "hidden" && (
           <div className={`${shell.sideClass} side-col-wrapper`}>
              {/* Replace this div with your specific sidebar component */}
-             <div className="side-placeholder">Sidebar</div>
+             <div className="side-placeholder">sidebar</div>
           </div>
         )}
       
