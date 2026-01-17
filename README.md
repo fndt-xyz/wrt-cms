@@ -24,7 +24,7 @@ How to Write Content
 
 This template uses a Content-First approach. You do not need to build new routes or manage complex navigation logic.
 
-Locate your content: Navigate to app/[folder]/view.tsx for dev to write page layout code. Navigate to app/[folder]/cntnt01.tsx for writer to insert content of the page.
+Locate your view and content : Navigate to app/[folder]/view.tsx for dev to write page layout code. Navigate to app/[folder]/cntnt01.tsx for writer to insert content of the page.
 
 Write: Edit the file using standard Tailwind CSS and React components.
 
