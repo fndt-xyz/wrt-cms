@@ -68,7 +68,7 @@ export const navbarn = () => {
                     <div className="flex flex-col bg-white border border-slate-100 rounded-xl shadow-xl overflow-hidden py-2">
                       {Object.entries(item.children).map(([label, path]) => (
                         <Link 
-                          key={path as string} 
+                          key={label} 
                           href={path as string} 
                           onClick={closeMenu}
                           className="px-4 py-2 hover:bg-slate-50 text-slate-600 hover:text-slate-900 transition-colors border-b border-slate-50 last:border-0"
