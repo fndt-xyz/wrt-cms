@@ -2,7 +2,6 @@
 
 A developer-first Next.js template designed to decouple content from code.
 
-The Core Goal
 The mission of wrt-cms is simple: allow developers and writers to focus entirely on writing. By using a config-driven architecture, you can deploy a full-scale site and manage all your pages by simply editing standard .tsx content files.
 
 Quick Start
@@ -25,7 +24,7 @@ How to Write Content
 
 This template uses a Content-First approach. You do not need to build new routes or manage complex navigation logic.
 
-Locate your content: Navigate to app/[folder]/cntnt01.tsx.
+Locate your content: Navigate to app/[folder]/view.tsx for dev to write page layout code. Navigate to app/[folder]/cntnt01.tsx for writer to insert content of the page.
 
 Write: Edit the file using standard Tailwind CSS and React components.
 
