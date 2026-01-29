@@ -1,3 +1,4 @@
+// config/menu.ts
 // define your clean mapping here
 export const pagesMap = {
   'page 01': '/pages',

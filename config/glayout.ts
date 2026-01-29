@@ -1,3 +1,4 @@
+// config/glayout.ts
 export const layouts = {
   'front-pg': {
     gridClass: "grid-front-page",

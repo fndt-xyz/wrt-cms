@@ -1,4 +1,5 @@
 // app/about/view.tsx
+
 import * as ContentModule from './cntnt01';
 
 export default function View({ shell, title }: any) {

@@ -1,4 +1,5 @@
 // app/pages/view.tsx
+
 import * as ContentModule from './cntnt01';
 import PgsLnks from './pgs-lnks';
 

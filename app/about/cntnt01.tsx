@@ -1,5 +1,4 @@
 // app/about/cntnt01.tsx
-
 export const coolTitle = ""; // This overwrites the global title
 
 export default function Cntnt01() {

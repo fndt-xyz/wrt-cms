@@ -1,4 +1,5 @@
 // app/pages/page.tsx
+
 import { pageList } from "@/config/page-list";
 import { layouts } from "@/config/glayout";
 import View from "./view";
