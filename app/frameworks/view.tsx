@@ -1,4 +1,4 @@
-// app/frameworks/view.tsx
+// app/pages/frameworks/view.tsx
 import * as ContentModule from './cntnt01';
 import Cntnt02 from './cntnt02';
 import { CntntHd } from './cntnt01.hd'; 

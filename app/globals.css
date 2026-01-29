@@ -1,3 +1,5 @@
+/* app/global.css */
+
 @import "tailwindcss";
 
 :root {
@@ -26,11 +28,11 @@ body {
 @layer components {
   /* Main Layout Containers */
   .view-container {
-    @apply max-w-6xl mx-auto px-6 py-6;
+    @apply max-w-6xl mx-auto px-2 md:px-6 py-6;
   }
 
   .view-card {
-    @apply pt-6 px-8 pb-8 border border-slate-200 rounded-2xl bg-white shadow-sm;
+	@apply pt-6 px-2 md:px-8 pb-8 border border-slate-200 rounded-2xl bg-white shadow-sm;
   }
 
   .view-title {
@@ -84,4 +86,27 @@ body {
   .side-col-front {
     @apply flex flex-col;
   }
+}
+
+.jstf-content-wrapper {
+    max-width: 800px; /* Optional: limits width */
+    margin: 0 auto;
+}
+
+.jstf-content-wrapper p {
+    font-size: 14px;       /* Adjusted for smaller font size */
+    line-height: 1.5;      /* Adjusted for smaller font size */
+    margin-bottom: 1.2rem; /* Balanced spacing between paragraphs */
+    text-align: justify;   /* Justified text */
+    color: #333;           /* Soft black for eye comfort */
+    hyphens: auto;         /* Prevents large gaps in justified text */
+}
+
+/* Phone/Mobile (Screen widths up to 768px) */
+	@media screen and (max-width: 768px) {
+    .jstf-content-wrapper p {
+        font-size: 14px;   /* Smaller font */
+        line-height: 1.4;   /* Slightly tighter */
+        text-align: justify;   /* Optional: Justify */
+    }
 }

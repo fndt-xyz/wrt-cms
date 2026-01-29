@@ -1,4 +1,4 @@
-//app/page.tsx
+// app/page.tsx
 import { pageList } from "@/config/page-list";
 import { layouts } from "@/config/glayout";
 import View from "./front-page/view"; // Always import the local view as 'View'

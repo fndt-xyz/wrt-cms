@@ -12,3 +12,94 @@
   text-transform: lowercase; 
   letter-spacing: -0.025em; 
 }
+
+/* Computer Modern Serif style stack */
+.scnt-content-wrapper {
+    font-family: "Computer Modern Serif", "Latin Modern Roman", Georgia, "Times New Roman", serif;
+    max-width: 800px; /* Optional: limits width */
+    margin: 0 auto;
+}
+
+/* Laptop/Desktop: Matches global 14px scale but with scnt-wrapper style */
+.scnt-content-wrapper p {
+    font-size: 15px;       /* Adjusted for smaller font size */
+    line-height: 1.5;      /* Adjusted for smaller font size */
+    margin-bottom: 1.2rem; /* Balanced spacing between paragraphs */
+    text-align: justify;   /* Justified text */
+    color: #333;           /* Soft black for eye comfort */
+    hyphens: auto;         /* Prevents large gaps in justified text */
+}
+
+/* Phone/Mobile (Screen widths up to 768px) */
+@media screen and (max-width: 768px) {
+    .scnt-content-wrapper p {
+        font-size: 14px;   /* Smaller font */
+        line-height: 1.4;   /* Slightly tighter */
+        text-align: justify;   /* Optional: Justify */
+    }
+}
+
+/* Container Style */
+.right-col-links-style {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* Sidebar Header (matches right-col-link-h2 logic) */
+.right-col-link-h2 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #94a3b8; /* slate-400 */
+    text-transform: lowercase;
+    letter-spacing: 0.1em;
+    padding: 1.5rem 1rem 0.5rem 1rem;
+}
+
+/* Button List Container */
+.link-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-top: 1rem;
+}
+
+/* Base Button Style */
+.link-item-btn {
+    text-align: left;
+    font-size: 14px; /* Default for laptop */
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.375rem;
+    transition: all 0.2s;
+    text-transform: lowercase;
+    font-family: var(--font-lato), sans-serif;
+    border: 1px solid transparent;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* Hover & Inactive State */
+.link-item-btn.inactive {
+    color: #64748b; /* slate-500 */
+}
+
+.link-item-btn.inactive:hover {
+    color: #1e293b; /* slate-800 */
+    background-color: #f8fafc; /* slate-50 */
+}
+
+/* Active State */
+.link-item-btn.active {
+    background-color: #f1f5f9; /* slate-100 */
+    color: #0f172a;           /* slate-900 */
+    font-weight: 700;
+    border-color: #e2e8f0;    /* slate-200 */
+}
+
+/* Mobile Responsive Scale */
+@media screen and (max-width: 768px) {
+    .link-item-btn {
+        font-size: 12px; /* Scales down to match your jstf-content-wrapper */
+        padding: 0.4rem 0.6rem;
+    }
+}

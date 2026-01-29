@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import "./cmpnt.css";
 
 export const footern = () => {
   return (
-    <footer className="w-full border-t border-slate-50 bg-white px-6 py-8">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
+    <footer className="nav-ft-container border-t border-slate-50 py-8">
+      <div className="inner-wrap footer-inner">
         
         {/* Left Side */}
         <p className="lowercase text-[10px] sm:text-xs text-slate-400">
@@ -13,7 +14,6 @@ export const footern = () => {
 
         {/* Right Side */}
         <div className="flex items-center gap-6">
-          {/* Chevron: Changed from slate-300 to slate-400 for better visibility, hover to black */}
           <a href="#" className="text-slate-400 hover:text-black transition-colors duration-300">
             <svg 
               width="20" 
@@ -29,11 +29,10 @@ export const footern = () => {
             </svg>
           </a>
 
-          {/* Mini Logo: Increased base opacity so it's not so 'milky' */}
           <Link href="/">
             <Image 
               src="/logo.png" 
-              alt="init logo" 
+              alt="wrt logo" 
               width={20} 
               height={20} 
               className="opacity-60 hover:opacity-100 transition-opacity duration-300"

@@ -1,15 +1,14 @@
-//app/front-page/view.tsx
-// Note the change in import to include * as Content
+// app/front-page/view.tsx
 import * as ContentModule from './cntnt01'; 
 import Shapes from './shapes';
 
 export default function View({ shell, title }: any) {
-  // 1. Try to get coolTitle from the module, otherwise use the passed title
   const Content = ContentModule.default;
   const displayedTitle = (ContentModule as any).coolTitle || title;
 
   return (
     <div className="view-container">
+      {/* The grid-two-one class is now handled globally in your CSS */}
       <div className={shell.gridClass}>
         
         <div className={`${shell.mainClass} view-card`}>
@@ -21,6 +20,7 @@ export default function View({ shell, title }: any) {
           </div>
         </div>
 
+        {/* Sidebar only shows if not hidden */}
         {shell.sideClass !== "hidden" && (
           <div className={`${shell.sideClass} side-col-front`}>
             <Shapes />

@@ -1,0 +1,46 @@
+/* // components/cmpnt.css */
+/* Shared layout container for Nav and Footer */
+
+/* Shared "Outer" Container (Padding & Width) */
+.nav-ft-container {
+    width: 100%;
+    background-color: #ffffff;
+    /* Using your new px-2 (0.5rem) mobile padding */
+    padding-left: 1.5rem; 
+    padding-right: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .nav-ft-container {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Base Wrapper Logic */
+.inner-wrap {
+    max-width: 1152px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+/* FOOTER SPECIFIC: Always stay spread apart (Logo right, Copyright left) */
+.footer-inner {
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* NAVBAR SPECIFIC: Stack on mobile, Row on laptop */
+.nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+@media (min-width: 640px) {
+    .nav-inner {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
