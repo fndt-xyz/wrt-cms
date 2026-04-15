@@ -60,7 +60,7 @@ export default function Shapes() {
       </svg>
 
       {/* Brand Watermark */}
-      <div className="absolute bottom-8 text-[10px] font-mono uppercase tracking-[0.5em] text-slate-300">
+      <div className="absolute bottom-8 text-[10px] font-mono tracking-[0.5em] text-slate-300">
         wrt-cms
       </div>
     </div>
