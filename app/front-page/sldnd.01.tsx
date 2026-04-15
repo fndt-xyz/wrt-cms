@@ -13,7 +13,7 @@ export default function Sldnd01() {
         </div>
         
         {/* Placeholder text */}
-        <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+        <span className="text-[10px] font-mono tracking-widest text-slate-400">
           placeholder_01
         </span>
       </div>

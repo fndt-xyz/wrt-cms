@@ -135,7 +135,38 @@
 }
 
 
-/* --- 2. CAROUSEL SECTION (UNCHANGED) --- */
-.carousel-wrapper { position: relative; width: 100%; }
-.carousel-container { display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; }
-.carousel-item { flex-shrink: 0; min-width: 160px; aspect-ratio: 1/1; background: white; border-radius: 0; border: 1px solid #f1f5f9; }
+/* --- BARND CAROUSEL  --- */
+
+.carousel-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+    scrollbar-width: thin; /* Matches your HTML template */
+}
+
+.carousel-container:active {
+    cursor: grabbing;
+}
+
+.carousel-item {
+    flex: 0 0 200px; /* Ensures consistent width across both CMS versions */
+    background-color: #ffffff;
+    border: 1px solid #f1f5f9; /* Slate-100 */
+    padding: 1rem;
+    border-radius: 0; /* matches your rounded-none */
+    box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05); /* shadow-sm */
+    transition: all 300ms ease-in-out;
+    user-select: none; /* select-none */
+}
+
+.carousel-item:hover {
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); /* hover:shadow-md */
+    border-color: #e2e8f0; /* hover:border-slate-200 */
+    transform: translateY(-2px);
+}
