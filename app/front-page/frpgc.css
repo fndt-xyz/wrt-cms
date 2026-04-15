@@ -1,0 +1,141 @@
+/* app/front-page/frpgc.css */
+
+/* --- 1. HERO SLIDER (NAMESPACED) --- */
+.hr-viewport {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 0;
+/*  background-color: #f8fafc;
+  border: 1px solid #f1f5f9; */
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+@media (min-width: 640px) {
+  .hr-viewport { height: 400px; }
+}
+
+.hr-track {
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  height: 100%;
+}
+
+.hr-item {
+  min-width: 100%;
+  flex: 0 0 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none; /* Critical for swipe to work */
+}
+
+/* Slider Arrows - Restored and Fixed */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  width: 44px;  /* Defined size */
+  height: 44px; /* Defined size */
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #475569;
+  transition: all 200ms ease;
+  z-index: 30;
+  opacity: 0; /* Hidden by default */
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* On desktop, show arrows when hovering over the viewport */
+@media (min-width: 768px) {
+  .hr-viewport:hover .slider-arrow {
+    opacity: 1;
+  }
+}
+
+.slider-arrow:hover {
+  background: white;
+  color: #0f172a;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.arrow-left { left: 1rem; }
+.arrow-right { right: 1rem; }
+
+/* Controller (words) */
+.indicator-container {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.75rem;
+  z-index: 40;
+  white-space: nowrap;
+  align-items: center;
+  width: auto;
+  max-width: 90vw;
+  justify-content: center;
+}
+
+.indicator-container button {
+  flex-shrink: 0;
+}
+
+/* --- 3. TRIPLE IMAGE ROW (New Section) --- */
+.fp-row-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping on small screens */
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+.fp-row-item {
+    flex: 0 1 240px; /* Base width of 240px */
+    max-width: 240px;
+}
+
+.fp-row-item img {
+    width: 240px;
+    height: 180px;
+    display: block;
+    object-fit: contain;
+    border: 1px solid #e2e8f0; /* Matches your slate-200 */
+    padding: 4px;
+    background-color: #ffffff;
+    border-radius: 0em; /* Matches tailwind rounded-md */
+    box-sizing: border-box;
+}
+
+/* On wider phones/tablets, ensure it stays in a row as long as possible */
+@media (max-width: 520px) {
+    .fp-row-container {
+        gap: 0.75rem; /* Tighter gap on small screens to keep them side-by-side */
+    }
+    .fp-row-item {
+        flex: 0 1 45%; /* Shrinks images slightly to prevent early stacking */
+    }
+    .fp-row-item img {
+        width: 100%; /* Responsive within the flex-basis */
+        height: auto;
+    }
+}
+
+
+/* --- 2. CAROUSEL SECTION (UNCHANGED) --- */
+.carousel-wrapper { position: relative; width: 100%; }
+.carousel-container { display: flex; overflow-x: auto; gap: 1rem; padding-bottom: 1rem; }
+.carousel-item { flex-shrink: 0; min-width: 160px; aspect-ratio: 1/1; background: white; border-radius: 0; border: 1px solid #f1f5f9; }

@@ -1,23 +1,12 @@
-/* // components/cmpnt.css */
-/* Shared layout container for Nav and Footer */
-
-/* Shared "Outer" Container (Padding & Width) */
+/* --- Container & Wrapper --- */
 .nav-ft-container {
     width: 100%;
     background-color: #ffffff;
-    /* Using your new px-2 (0.5rem) mobile padding */
+    /* Keeping the 1.5rem padding for consistent framework breathing room */
     padding-left: 1.5rem; 
     padding-right: 1.5rem;
 }
 
-@media (min-width: 768px) {
-    .nav-ft-container {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-/* Base Wrapper Logic */
 .inner-wrap {
     max-width: 1152px;
     margin-left: auto;
@@ -25,13 +14,7 @@
     display: flex;
 }
 
-/* FOOTER SPECIFIC: Always stay spread apart (Logo right, Copyright left) */
-.footer-inner {
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* NAVBAR SPECIFIC: Stack on mobile, Row on laptop */
+/* --- Navbar Logic (Stack on Mobile, Row on Desktop) --- */
 .nav-inner {
     flex-direction: column;
     align-items: flex-start;
@@ -43,4 +26,80 @@
         align-items: center;
         justify-content: space-between;
     }
+}
+
+/* --- Footer Layout (Spread apart: Copyright/Contact Left, Logo Right) --- */
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+/* --- Contact & Phone Alignment Logic (The "Magic" from 2nd-fndt) --- */
+.contact-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.contact-row {
+    display: flex;
+    align-items: flex-start;
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+@media (min-width: 640px) {
+    .contact-row {
+        font-size: 11px; /* Slightly tighter than 12px for the wrt-cms aesthetic */
+    }
+}
+
+.contact-label {
+    width: 85px; /* Keeps the colons perfectly vertical */
+    padding-top: 1px;
+}
+
+.contact-value-stack {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.contact-value-stack > span {
+    padding-top: 1px; /* Nudges the colon to align with mono numbers */
+}
+
+/* --- WhatsApp Link & Icon (Grayscale Template Look) --- */
+.wa-link {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #94a3b8; /* Slate-400 for neutral template look */
+    text-decoration: none;
+    transition: color 0.3s ease;
+    min-height: 16px;
+}
+
+.wa-link:hover {
+    color: #000000;
+}
+
+.wa-icon {
+    width: 12px;
+    height: 12px;
+    filter: grayscale(100%) opacity(50%); /* Ghost look for template */
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.wa-link:hover .wa-icon {
+    filter: grayscale(0%) opacity(100%);
+}
+
+/* --- Utilities --- */
+.font-mono {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
